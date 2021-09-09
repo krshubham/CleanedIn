@@ -1,0 +1,21 @@
+{
+  "name": "CleanedIn",
+  "description": "Making LinkedIn Great Again, one update at a time",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/Ci.png",
+    "48": "icons/Ci48.png",
+    "128": "icons/Ci128.png"
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["cleaner.js"]
+    }
+  ]
+}
